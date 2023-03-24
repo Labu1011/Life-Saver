@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutUsActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat non arcu vitae hendrerit. \n \n Aenean venenatis ultrices lobortis. In faucibus, est non condimentum tristique, lorem risus placerat nibh, ut efficitur nisl tortor at augue. Curabitur sed dolor auctor, laoreet urna eu, tristique quam. Nunc feugiat elementum ornare. Nullam vitae nisl ac augue feugiat tincidunt vitae a ipsum. Mauris leo velit, facilisis vitae dignissim quis, faucibus id risus. Donec nec pharetra orci. Ut scelerisque eros a ultrices tincidunt. Aenean blandit tristique libero non ornare. Sed euismod dapibus neque eu eleifend. Nulla efficitur lobortis dictum. Donec bibendum nulla eu dolor facilisis, vitae faucibus justo pretium. In dapibus ut mauris et facilisis."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+</RelativeLayout>

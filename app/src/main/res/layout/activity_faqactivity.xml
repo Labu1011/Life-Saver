@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".FAQActivity">
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1. How does it work?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/answer1"
+        android:layout_below="@id/question1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+
+        />
+
+    <TextView
+        android:id="@+id/question2"
+        android:layout_below="@id/answer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. How does it affect our life?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/answer2"
+        android:layout_below="@id/question2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+
+        />
+
+    <TextView
+        android:id="@+id/question3"
+        android:layout_below="@id/answer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2. What are the age and other requirements to donate blood?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_below="@id/question3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+
+        />
+
+</RelativeLayout>
