@@ -23,7 +23,6 @@ import java.util.concurrent.TimeUnit;
 
 public class PhoneAuthActivity extends AppCompatActivity {
     private ActivityPhoneAuthBinding binding;
-    private boolean isNewUser;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
     EditText mphoneInput;
@@ -59,11 +58,7 @@ public class PhoneAuthActivity extends AppCompatActivity {
 
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
-                if(credential.getSmsCode() == null) {
-                    isNewUser = true;
-                } else {
-                    isNewUser = false;
-                }
+
             }
 
             @Override
@@ -81,7 +76,6 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 Intent intent = new Intent(PhoneAuthActivity.this, VerifyPhoneActivity.class);
                 intent.putExtra("phone", binding.phoneAuth.getText().toString().trim());
                 intent.putExtra("verificationId", verificationId);
-                intent.putExtra("isNewUser", isNewUser);
                 startActivity(intent);
 
             }

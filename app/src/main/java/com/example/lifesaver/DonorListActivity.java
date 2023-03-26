@@ -29,7 +29,7 @@ public class DonorListActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.donorRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         donorListItems = new ArrayList<>();
-        adapter = new DonorRecyclerViewAdapter(donorListItems);
+        adapter = new DonorRecyclerViewAdapter(donorListItems, this); // ---------
         recyclerView.setAdapter(adapter);
 
         LinearLayout progressBarContainer = findViewById(R.id.progressBarContainer);

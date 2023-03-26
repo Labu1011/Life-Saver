@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class HomepageActivity extends AppCompatActivity {
-    Button mdonorList, maboutUs, mfaq;
+    Button mdonorList, maboutUs, mfaq, mlogout;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,19 @@ public class HomepageActivity extends AppCompatActivity {
         mdonorList = findViewById(R.id.donorList);
         mfaq = findViewById(R.id.faq);
         maboutUs = findViewById(R.id.aboutUs);
+
+        // logout button click event
+        mlogout = findViewById(R.id.logout);
+        mlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firebaseAuth = FirebaseAuth.getInstance();
+                firebaseAuth.signOut();
+                Intent intent = new Intent(HomepageActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         // button click intent change
         mdonorList.setOnClickListener(new View.OnClickListener() {

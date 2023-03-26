@@ -1,9 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegistrationActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:context=".RegistrationActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/centerLine"
+            android:layout_centerInParent="true" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/name"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/fullName"
+                android:hint="Enter your full name"
+                android:inputType="text"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/address"
+            android:layout_below="@id/name"
+            android:layout_marginTop="15dp"
+            >
+            <EditText
+                android:id="@+id/yourAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your address"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/selectGroup"
+            android:orientation="vertical"
+            android:layout_below="@id/address"
+            android:layout_marginTop="20dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select blood group"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                />
+
+            <Spinner
+                android:id="@+id/bloodGroupSpinner"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lastDonatedText"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selectGroup"
+                android:text="Last donated on: "
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lastDonatedStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Never"
+                android:layout_marginTop="22dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/lastDonatedText"
+                android:layout_below="@id/selectGroup"
+                />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/donationTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/selectGroup"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            >
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:layout_marginTop="20dp"
+                android:datePickerMode="spinner" />
+
+            <Button
+                android:id="@+id/setDate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Set this date"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/purple_500" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Or"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/neverBtn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Never Donated Before"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/design_default_color_secondary" />
+
+        </LinearLayout>
+
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/registerBtn"
+            android:layout_below="@id/donationTime"
+            android:layout_marginTop="30dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/donationTime"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginRight="170dp"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+</ScrollView>

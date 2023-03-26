@@ -1,41 +1,51 @@
 package com.example.lifesaver;
 
-import com.google.firebase.Timestamp;
-
 public class Donor {
     private String name;
     private String bloodGroup;
     private String address;
     private int phone;
-    private Timestamp lastDonated;
+    private String lastDonatedOn;
 
     public Donor() {}
 
-    public Donor(String name, String bloodGroup, String address, int phone, Timestamp lastDonated) {
-        this.name = name;
-        this.bloodGroup = bloodGroup;
-        this.address = address;
-        this.phone = phone;
-        this.lastDonated = lastDonated;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getBloodGroup() {
         return bloodGroup;
     }
 
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
     public String getAddress() {
         return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getPhone() {
         return phone;
     }
 
-    public Timestamp getLastDonated() {
-        return lastDonated;
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public String getLastDonatedOn() {
+        return lastDonatedOn;
+    }
+
+    public void setLastDonatedOn(String lastDonatedOn) {
+        this.lastDonatedOn = lastDonatedOn;
     }
 }

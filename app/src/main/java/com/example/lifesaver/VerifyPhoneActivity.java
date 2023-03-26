@@ -16,9 +16,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
 
+import java.util.Objects;
+
 public class VerifyPhoneActivity extends AppCompatActivity {
     private ActivityVerifyPhoneBinding binding;
-    private boolean isNewUser;
     private String verificationId;
 
     @Override
@@ -27,8 +28,6 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         binding = ActivityVerifyPhoneBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // getting new user status through intent extra string
-        isNewUser = Boolean.parseBoolean(getIntent().getStringExtra("isNewUser"));
 
         binding.phoneNumber.setText(String.format(String.format("+880-%s", getIntent().getStringExtra("phone"))));
 
@@ -58,8 +57,9 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if(task.isSuccessful()) {
                                     Intent intent;
-                                    if(isNewUser) {
+                                    if(Objects.requireNonNull(task.getResult().getAdditionalUserInfo()).isNewUser()) {
                                         intent = new Intent(VerifyPhoneActivity.this, RegistrationActivity.class);
+                                        intent.putExtra("phone", getIntent().getStringExtra("phone"));
                                     } else {
                                         intent = new Intent(VerifyPhoneActivity.this, HomepageActivity.class);
                                     }
