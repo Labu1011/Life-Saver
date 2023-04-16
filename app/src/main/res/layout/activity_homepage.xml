@@ -10,7 +10,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-    android:orientation="horizontal"
+      android:orientation="horizontal"
       android:layout_marginTop="50dp"
       android:layout_marginLeft="20dp"
       android:layout_marginRight="20dp"
@@ -98,6 +98,7 @@
         android:text="Donor List"
         />
     <Button
+        android:id="@+id/bloodBankList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
