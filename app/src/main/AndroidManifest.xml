@@ -18,6 +18,9 @@
         android:theme="@style/Theme.LifeSaver"
         tools:targetApi="31">
         <activity
+            android:name=".FindDonorActivity"
+            android:exported="false" />
+        <activity
             android:name=".DonorListActivity"
             android:exported="false" />
         <activity
