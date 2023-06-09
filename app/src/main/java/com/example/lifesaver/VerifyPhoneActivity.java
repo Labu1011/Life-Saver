@@ -3,7 +3,9 @@ package com.example.lifesaver;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -63,6 +65,12 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                                     } else {
                                         intent = new Intent(VerifyPhoneActivity.this, HomepageActivity.class);
                                     }
+
+                                    // shared preferences for storing key-value pair (eg. phone)
+                                    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                                    editor.putString("phone", getIntent().getStringExtra("phone"));
+                                    editor.apply();
 
                                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                     startActivity(intent);

@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
+    android:scrollbars="none"
     tools:context=".FAQActivity">
 
-    <TextView
-        android:id="@+id/question1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="1. How does it work?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp" />
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp"
+        >
+        <TextView
+            android:id="@+id/question1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Who can donate blood?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp" />
 
-    <TextView
-        android:id="@+id/answer1"
-        android:layout_below="@id/question1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+        <TextView
+            android:id="@+id/answer1"
+            android:layout_below="@id/question1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="Eligibility criteria for blood donation can vary by country and organization, but generally, donors must be in good health, meet age and weight requirements, and not have certain medical conditions or risk factors. Common requirements include being at least 17 or 18 years old, meeting minimum weight requirements, and passing a health screening."
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/question2"
-        android:layout_below="@id/answer1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2. How does it affect our life?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp" />
+        <TextView
+            android:id="@+id/question2"
+            android:layout_below="@id/answer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. How often can I donate blood?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp" />
 
-    <TextView
-        android:id="@+id/answer2"
-        android:layout_below="@id/question2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+        <TextView
+            android:id="@+id/answer2"
+            android:layout_below="@id/question2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="The frequency of blood donation depends on factors such as local regulations and individual health. In many countries, donors can donate whole blood every 8 to 12 weeks (approximately every 2 to 3 months). However, the interval may be different for specific donation types, such as platelet or plasma donations. It's important to follow the guidelines provided by your local blood donation organization."
 
-        />
+            />
 
-    <TextView
-        android:id="@+id/question3"
-        android:layout_below="@id/answer2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2. What are the age and other requirements to donate blood?"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp" />
+        <TextView
+            android:id="@+id/question3"
+            android:layout_below="@id/answer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Is blood donation safe?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp" />
 
-    <TextView
-        android:layout_below="@id/question3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_marginTop="10dp"
-        android:text="In porta vulputate diam sit amet faucibus. Etiam eget augue ac metus gravida sollicitudin. Suspendisse vel neque sit amet nisi dictum elementum id eget mi"
+        <TextView
+            android:layout_below="@id/question3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:text="Yes, blood donation is generally considered safe. Donation centers follow strict protocols to ensure donor safety and the integrity of the blood supply. Screening processes are in place to identify potential health risks for both donors and recipients. The collection equipment used is sterile and disposable, minimizing the risk of infection. Donors are monitored during and after donation to identify any adverse reactions. It's important to provide accurate medical history information and to follow post-donation instructions for a safe donation experience."
 
-        />
+            />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

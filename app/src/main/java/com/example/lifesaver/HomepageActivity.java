@@ -2,7 +2,9 @@ package com.example.lifesaver;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,7 +12,7 @@ import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomepageActivity extends AppCompatActivity {
-    Button mfindDonor, mdonorList, maboutUs, mfaq, mlogout, mbloodBankList;
+    Button mfindDonor, mdonorList, maboutUs, mfaq, mlogout, mbloodBankList, mUpdateDonation;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class HomepageActivity extends AppCompatActivity {
         mfaq = findViewById(R.id.faq);
         maboutUs = findViewById(R.id.aboutUs);
         mbloodBankList = findViewById(R.id.bloodBankList);
+        mUpdateDonation = findViewById(R.id.updateDonationBtn);
 
         // logout button click event
         mlogout = findViewById(R.id.logout);
@@ -32,6 +35,14 @@ public class HomepageActivity extends AppCompatActivity {
             public void onClick(View view) {
                 firebaseAuth = FirebaseAuth.getInstance();
                 firebaseAuth.signOut();
+
+                // clear the phone value
+                SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("phone", "");
+                editor.apply();
+
+
                 Intent intent = new Intent(HomepageActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
@@ -43,6 +54,14 @@ public class HomepageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomepageActivity.this, FindDonorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mUpdateDonation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomepageActivity.this, UpdateDonationDateActivity.class);
                 startActivity(intent);
             }
         });

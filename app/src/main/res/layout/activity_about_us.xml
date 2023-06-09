@@ -4,14 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
     tools:context=".AboutUsActivity">
 
     <TextView
+        android:id="@+id/titleContributor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum volutpat non arcu vitae hendrerit. \n \n Aenean venenatis ultrices lobortis. In faucibus, est non condimentum tristique, lorem risus placerat nibh, ut efficitur nisl tortor at augue. Curabitur sed dolor auctor, laoreet urna eu, tristique quam. Nunc feugiat elementum ornare. Nullam vitae nisl ac augue feugiat tincidunt vitae a ipsum. Mauris leo velit, facilisis vitae dignissim quis, faucibus id risus. Donec nec pharetra orci. Ut scelerisque eros a ultrices tincidunt. Aenean blandit tristique libero non ornare. Sed euismod dapibus neque eu eleifend. Nulla efficitur lobortis dictum. Donec bibendum nulla eu dolor facilisis, vitae faucibus justo pretium. In dapibus ut mauris et facilisis."
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:text="Contributors:"
+        android:textColor="@color/black"
         android:layout_marginRight="20dp" />
+
+    <TextView
+        android:id="@+id/contributor1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleContributor"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:text="● MD. Tarek Jaman Labu (ID: 1905001)"
+        />
+    <TextView
+        android:id="@+id/contributor2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contributor1"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:text="● MD. Masum Billah (ID: 1905029)"
+        />
+
+    <TextView
+        android:id="@+id/contributor3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contributor2"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:text="● Rakib Hossain Sajib (ID: 1905009)"
+        />
+    <TextView
+        android:id="@+id/contributor4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contributor3"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:text="● MD. Naimur Rahman Naim (ID: 1905014)"
+        />
+
+    <TextView
+        android:id="@+id/contributor5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contributor4"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:text="● Shilpy Rani Mondal (ID: 1905013)"
+        />
+
+
 </RelativeLayout>

@@ -130,6 +130,7 @@ public class RegistrationActivity extends AppCompatActivity {
                             public void onSuccess(DocumentReference documentReference) {
                                 Toast.makeText(RegistrationActivity.this, "User created successfully!", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(RegistrationActivity.this, HomepageActivity.class);
+                                intent.putExtra("phoneFromRegistration", phone);
                                 startActivity(intent);
                                 finish();
                             }
