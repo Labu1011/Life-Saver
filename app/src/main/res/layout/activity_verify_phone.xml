@@ -80,15 +80,6 @@
         android:layout_below="@+id/centerLine"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Didn't get the code? Resend"
-        android:layout_below="@id/verifyButton"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:textSize="16sp" />
-
     <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"

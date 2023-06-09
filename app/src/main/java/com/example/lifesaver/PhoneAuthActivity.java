@@ -77,7 +77,6 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 intent.putExtra("phone", binding.phoneAuth.getText().toString().trim());
                 intent.putExtra("verificationId", verificationId);
                 startActivity(intent);
-
             }
         };
 
