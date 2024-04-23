@@ -15,7 +15,6 @@ import com.example.lifesaver.databinding.ActivityMainBinding;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import org.checkerframework.checker.units.qual.A;
 
 public class MainActivity extends AppCompatActivity {
@@ -60,5 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, 4000);
+
     }
+
 }

@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
-
 public class HomepageActivity extends AppCompatActivity {
     Button mfindDonor, mdonorList, maboutUs, mfaq, mlogout, mbloodBankList, mUpdateDonation;
     FirebaseAuth firebaseAuth;

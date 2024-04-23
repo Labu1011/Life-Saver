@@ -142,4 +142,19 @@
         android:text="About Us"
         />
   </LinearLayout>
+
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:gravity="bottom"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Life Saver v2.0"
+        android:paddingVertical="5dp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+      />
+  </RelativeLayout>
 </RelativeLayout>

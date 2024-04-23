@@ -5,14 +5,18 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
@@ -43,6 +47,14 @@ public class DonorRecyclerViewAdapter extends RecyclerView.Adapter<DonorRecycler
 
     @Override
     public void onBindViewHolder(@NonNull DonorRecyclerViewAdapter.MyViewHolder holder, int position) {
+        int redColor = ContextCompat.getColor(context, R.color.red_main);
+        int greenColor = ContextCompat.getColor(context, R.color.teal_700);
+
+        // eligibility check
+        String lastDonationDateStr = donorListItems.get(position).getLastDonatedOn();
+        boolean isEligible = DonorUtils.isDonorEligible(lastDonationDateStr);
+        holder.donorBack.setBackgroundColor(isEligible ? greenColor : redColor);
+
         holder.donorName.setText(donorListItems.get(position).getName());
         holder.donorGroup.setText(donorListItems.get(position).getBloodGroup());
         holder.address.setText(donorListItems.get(position).getAddress());
@@ -71,11 +83,13 @@ public class DonorRecyclerViewAdapter extends RecyclerView.Adapter<DonorRecycler
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView donorName, donorGroup, address, date;
+        LinearLayout donorBack;
         ImageView callBtn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            donorBack = itemView.findViewById(R.id.donorBack);
             donorName = itemView.findViewById(R.id.donorName);
             donorGroup = itemView.findViewById(R.id.donorGroup);
             address = itemView.findViewById(R.id.address);
