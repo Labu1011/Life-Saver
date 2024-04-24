@@ -22,15 +22,29 @@
           android:textStyle="bold"
           android:textSize="35sp"
           android:textColor="#2e2e2e" />
-
-      <Button
-          android:id="@+id/logout"
-          android:layout_width="50dp"
-          android:layout_gravity="end"
-          android:layout_marginLeft="35dp"
+      <LinearLayout
+          android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:backgroundTint="@color/purple_500"
-          android:drawableEnd="@drawable/baseline_logout_24" />
+          android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/myProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:textSize="12sp"
+            android:backgroundTint="@color/material_dynamic_neutral30"
+            />
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="50dp"
+            android:layout_gravity="end"
+            android:layout_marginLeft="35dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:drawableEnd="@drawable/baseline_logout_24" />
+      </LinearLayout>
+
   </LinearLayout>
 
 

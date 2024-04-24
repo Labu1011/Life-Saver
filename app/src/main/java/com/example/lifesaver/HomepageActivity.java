@@ -11,7 +11,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 public class HomepageActivity extends AppCompatActivity {
-    Button mfindDonor, mdonorList, maboutUs, mfaq, mlogout, mbloodBankList, mUpdateDonation;
+    Button mfindDonor, mdonorList, maboutUs, mfaq, mlogout, mbloodBankList, mUpdateDonation, mmyProfile;
     FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class HomepageActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
+        mmyProfile = findViewById(R.id.myProfile);
         mfindDonor = findViewById(R.id.findDonor);
         mdonorList = findViewById(R.id.donorList);
         mfaq = findViewById(R.id.faq);
@@ -49,6 +50,13 @@ public class HomepageActivity extends AppCompatActivity {
         });
 
         // button click intent change
+        mmyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomepageActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
         mfindDonor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,5 +1,7 @@
 package com.example.lifesaver;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -61,12 +63,24 @@ public class UpdateDonationDateActivity extends AppCompatActivity {
                             DocumentSnapshot documentSnapshot = queryDocumentSnapshots.getDocuments().get(0);
                             DocumentReference docRef = documentSnapshot.getReference();
 
-                            docRef.update("lastDonatedOn", selectedDate()).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Toast.makeText(UpdateDonationDateActivity.this, "Updated successfully!", Toast.LENGTH_SHORT).show();
-                                }
-                            });
+                            if(documentSnapshot.getString("lastDonatedOn") != selectedDate()) {
+                                docRef.update("lastDonatedOn", selectedDate()).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(UpdateDonationDateActivity.this, "Updated successfully!", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+
+                                int updatedCount = Integer.parseInt(documentSnapshot.get("donationCount").toString()) + 1;
+                                docRef.update("donationCount", updatedCount).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void unused) {
+                                        Toast.makeText(UpdateDonationDateActivity.this, "+1 donation", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {

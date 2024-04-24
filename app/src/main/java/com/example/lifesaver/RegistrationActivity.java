@@ -122,6 +122,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 user.put("bloodGroup", bloodGroup);
                 user.put("phone", phone);
                 user.put("lastDonatedOn", mlastDonatedStatus.getText());
+                user.put("donationCount", mlastDonatedStatus.getText().equals("never") ? 0 : 1);
 
                 db.collection("donors")
                         .add(user)
