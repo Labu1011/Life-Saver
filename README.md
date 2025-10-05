@@ -5,10 +5,10 @@ Life-Saver is an Android application designed to connect blood donors with those
 ## 🚀 Features
 
 *   **User Authentication:** Secure sign-up and login using phone number authentication.
-*   **Find Donors:** Search for blood donors based on blood group and location.
-*   **Donor Profiles:** View donor information and their availability.
+*   **Find Donors:** Search for blood donors based on blood group.
+*   **Donor Profiles:** View donor information and their availability and contact directly via phone.
 *   **Become a Donor:** Users can register themselves as donors to help others.
-*   **User Profile Management:** Users can manage their own profile and contact information.
+*   **Update Donation Date:** Donor can update their last donation date which contributes to availability check.
 
 ## 🛠️ Tech Stack
 
