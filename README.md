@@ -22,8 +22,8 @@ Life-Saver is an Android application designed to connect blood donors with those
     *   Material Design Components
 
 ## Screenshots
-<img width="258" height="456" alt="Screenshot 2025-10-05 at 5 13 42 PM" src="https://github.com/user-attachments/assets/7743fad9-5364-4fa6-82cd-ffedde0ba115" />
 <img width="257" height="457" alt="Screenshot 2025-10-05 at 5 13 29 PM" src="https://github.com/user-attachments/assets/c3832d54-57e3-4915-8d60-1f33eb10bd1a" />
+<img width="258" height="456" alt="Screenshot 2025-10-05 at 5 13 42 PM" src="https://github.com/user-attachments/assets/7743fad9-5364-4fa6-82cd-ffedde0ba115" />
 <img width="258" height="458" alt="Screenshot 2025-10-05 at 5 12 19 PM" src="https://github.com/user-attachments/assets/579bfbc0-0a7c-49b9-bc47-c285b21f45f7" />
 
 
